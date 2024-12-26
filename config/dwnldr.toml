@@ -1,6 +1,6 @@
 [[handlers]]
 name = "YouTube"
-pattern = "youtube.com|youtu.be"
+pattern = "https://[m.]?youtube.com/watch\?v\="
 command = ["yt-dlp", "{url}"]
 
 [[handlers]]
@@ -9,14 +9,19 @@ pattern = "magnet:"
 command = ["torrent", "{url}"]
 
 [[handlers]]
+name = "BBC Sounds Series"
+pattern = "https://www.bbc.co.uk/sounds/series/"
+command = ["get_iplayer", "-g", "--pid-recursive", "{url}" ]
+
+[[handlers]]
 name = "BBC iPlayer"
 pattern = "bbc.co.uk/iplayer"
-command = ["get_iplayer", "{url}"]
+command = ["get_iplayer", "-g", "{url}"]
 
 [[handlers]]
 name = "Generic HTTP Downloader"
 pattern = "https?://"
-command = ["wget", "{url}"]
+command = ["curl", "{url}", "-o", "{outputDir}"]
 
 [[handlers]]
 name = "Generic FTP Downloader"
