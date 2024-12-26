@@ -1,13 +1,7 @@
 package main
 
-import (
-	"dwnldr/pkg/config"
-	"dwnldr/pkg/handlers"
-	"fmt"
-)
+import cmd "github.com/yamatt/dwnldr/cli"
 
 func main() {
-    config.LoadConfig("config/config.toml")
-    handlers.HandleURL("https://www.youtube.com/watch?v=example")
-    fmt.Println("Download started!")
+    cmd.Execute()
 }
