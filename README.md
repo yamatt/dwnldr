@@ -9,5 +9,5 @@ You will need to install the tools in the config file yourself.
 You will need a configuration file first. There is an example one in `config/dwnldr.toml`.
 
 ```
-dwnldr download https://www.youtube.com/watch?v=XfELJU1mRMg
+dwnldr download "https://www.youtube.com/watch?v=XfELJU1mRMg"
 ```
