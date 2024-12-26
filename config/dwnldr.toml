@@ -1,29 +1,29 @@
 [[handlers]]
 name = "YouTube"
-pattern = "https://[m.]?youtube.com/watch\?v\="
-command = ["yt-dlp", "{url}"]
+pattern = 'https://www.youtube.com/watch\?v\='
+command = ["yt-dlp", "-P", "{outputDir}", "{url}"]
 
 [[handlers]]
 name = "BitTorrent"
-pattern = "magnet:"
-command = ["torrent", "{url}"]
+pattern = 'magnet:'
+command = ["torrent", "download", "{url}"]
 
 [[handlers]]
 name = "BBC Sounds Series"
-pattern = "https://www.bbc.co.uk/sounds/series/"
-command = ["get_iplayer", "-g", "--pid-recursive", "{url}" ]
+pattern = 'https://www.bbc.co.uk/sounds/series/'
+command = ["get_iplayer", "-g", "--pid-recursive", "{url}", "--output", "{outputDir}"]
 
 [[handlers]]
 name = "BBC iPlayer"
-pattern = "bbc.co.uk/iplayer"
-command = ["get_iplayer", "-g", "{url}"]
+pattern = 'bbc.co.uk/iplayer'
+command = ["get_iplayer", "-g", "{url}", "--output", "{outputDir}"]
 
 [[handlers]]
 name = "Generic HTTP Downloader"
-pattern = "https?://"
-command = ["curl", "{url}", "-o", "{outputDir}"]
+pattern = 'https?://'
+command = ["curl", "{url}", "--output-dir", "{outputDir}"]
 
 [[handlers]]
 name = "Generic FTP Downloader"
-pattern = "ftp://"
-command = ["wget", "{url}"]
+pattern = 'ftp://'
+command = ["wget", "{url}", "-P", "{outputDir}"]
