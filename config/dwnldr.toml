@@ -1,0 +1,24 @@
+[[handlers]]
+name = "YouTube"
+pattern = "youtube.com|youtu.be"
+command = ["yt-dlp", "{url}"]
+
+[[handlers]]
+name = "BitTorrent"
+pattern = "magnet:"
+command = ["torrent", "{url}"]
+
+[[handlers]]
+name = "BBC iPlayer"
+pattern = "bbc.co.uk/iplayer"
+command = ["get_iplayer", "{url}"]
+
+[[handlers]]
+name = "Generic HTTP Downloader"
+pattern = "https?://"
+command = ["wget", "{url}"]
+
+[[handlers]]
+name = "Generic FTP Downloader"
+pattern = "ftp://"
+command = ["wget", "{url}"]
