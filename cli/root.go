@@ -10,7 +10,7 @@ import (
 	"github.com/yamatt/dwnldr/pkg/handlers" // Example of importing the downloader logic
 )
 
-var configPath string = "config/dwnldr.toml"
+var configPath string = "dwnldr.toml"
 var outputDir string = "."
 
 // Define the root command
