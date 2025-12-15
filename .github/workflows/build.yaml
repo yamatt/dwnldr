@@ -36,7 +36,7 @@ jobs:
         run: go build -o dwnldr ./cmd/dwnldr # Builds the binary for the `dwnldr` tool
 
       - name: Upload the binary as an artifact
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: dwnldr
           path: ./dwnldr # Upload the generated binary as an artifact
